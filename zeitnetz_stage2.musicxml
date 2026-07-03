@@ -8,7 +8,7 @@
   <identification>
     <creator type="composer">after Lachenmann / Mouvement (– vor der Erstarrung)</creator>
     <encoding>
-      <encoding-date>2026-03-21</encoding-date>
+      <encoding-date>2026-07-03</encoding-date>
       <software>music21 v.8.3.0</software>
     </encoding>
   </identification>
@@ -19,12 +19,12 @@
     </scaling>
   </defaults>
   <part-list>
-    <score-part id="P33d9389fe25e07abc297635f33447852">
+    <score-part id="P8f68c4146991b771b42bbfc7af0dc21b">
       <part-name>Zeitnetz V1</part-name>
     </score-part>
   </part-list>
   <!--=========================== Part 1 ===========================-->
-  <part id="P33d9389fe25e07abc297635f33447852">
+  <part id="P8f68c4146991b771b42bbfc7af0dc21b">
     <!--========================= Measure 1 ==========================-->
     <measure number="1">
       <attributes>
@@ -3447,7 +3447,7 @@
         <accidental>sharp</accidental>
         <lyric name="1" number="1">
           <syllabic>single</syllabic>
-          <text>14</text>
+          <text>13</text>
         </lyric>
       </note>
       <note>
@@ -3465,14 +3465,13 @@
       </note>
       <note>
         <rest />
-        <duration>3780</duration>
+        <duration>2520</duration>
         <type>16th</type>
-        <dot />
       </note>
       <note print-object="no" print-spacing="yes">
         <rest />
-        <duration>1260</duration>
-        <type>32nd</type>
+        <duration>2520</duration>
+        <type>16th</type>
       </note>
       <barline location="right">
         <bar-style>light-heavy</bar-style>

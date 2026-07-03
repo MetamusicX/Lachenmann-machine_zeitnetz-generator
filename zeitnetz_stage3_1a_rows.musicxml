@@ -8,7 +8,7 @@
   <identification>
     <creator type="composer">after Lachenmann / Mouvement (– vor der Erstarrung)</creator>
     <encoding>
-      <encoding-date>2026-03-21</encoding-date>
+      <encoding-date>2026-07-03</encoding-date>
       <software>music21 v.8.3.0</software>
     </encoding>
   </identification>
@@ -19,45 +19,45 @@
     </scaling>
   </defaults>
   <part-list>
-    <score-part id="P7cab156dff116a0fbf193a866750c8b5">
+    <score-part id="P073a276e71993b5920f1da9eb69fc7ba">
       <part-name>Row 0</part-name>
     </score-part>
-    <score-part id="P66ec945f942382b12f994394a91a14f1">
+    <score-part id="P98259f38d384161aaad5ee623a2f3b3d">
       <part-name>Row 1</part-name>
     </score-part>
-    <score-part id="Pa7745b9c0fd84929dc91a72766c28006">
+    <score-part id="P43087220402ef3420d13c76c4eeb5c09">
       <part-name>Row 2</part-name>
     </score-part>
-    <score-part id="Pfdf71098cd0ca964bc4021b2b9e9fffd">
+    <score-part id="P3e6ba09a0c2042f336d8bf41486e76dc">
       <part-name>Row 3</part-name>
     </score-part>
-    <score-part id="P65831dbb877842377ba2d4f5c6a24cde">
+    <score-part id="Pc7002faedd7ce98049241b1c4ce41aa3">
       <part-name>Row 4</part-name>
     </score-part>
-    <score-part id="P5b68d7e645724a1d1b7cf0267ca0f4a1">
+    <score-part id="P7661c2b7ac1f3c3e82f45e9c6451b57a">
       <part-name>Row 5</part-name>
     </score-part>
-    <score-part id="P55e20c8d7592169d1d286c2e0c384903">
+    <score-part id="Pe951ead949e2bea92d3b96eb5f4db70b">
       <part-name>Row 6</part-name>
     </score-part>
-    <score-part id="P4f490a927026693fbf72f7ef47e2e120">
+    <score-part id="P7f60cce8e74515cb46fb305a53c2a409">
       <part-name>Row 7</part-name>
     </score-part>
-    <score-part id="P9452e8a45860df86e01d6b4868927b8c">
+    <score-part id="P689daea058c1be85c36264d060cf8ad9">
       <part-name>Row 8</part-name>
     </score-part>
-    <score-part id="P2b90c36bccbe4340d6fd7d90bae2257c">
+    <score-part id="P257bfd724f69a51d9ce98dd5a55174ae">
       <part-name>Row 9</part-name>
     </score-part>
-    <score-part id="P7439c38ceec350f7e43c75ca14b6c10a">
+    <score-part id="P4c415d19c1b75a948804ef65b3070e00">
       <part-name>Row 10</part-name>
     </score-part>
-    <score-part id="P1fdda1e4658e4313fb79267f4c7936fe">
+    <score-part id="P5a672cc0441fec6641357d51532d6620">
       <part-name>Row 11</part-name>
     </score-part>
   </part-list>
   <!--=========================== Part 1 ===========================-->
-  <part id="P7cab156dff116a0fbf193a866750c8b5">
+  <part id="P073a276e71993b5920f1da9eb69fc7ba">
     <!--========================= Measure 1 ==========================-->
     <measure number="1">
       <attributes>
@@ -207,7 +207,7 @@
     </measure>
   </part>
   <!--=========================== Part 2 ===========================-->
-  <part id="P66ec945f942382b12f994394a91a14f1">
+  <part id="P98259f38d384161aaad5ee623a2f3b3d">
     <!--========================= Measure 1 ==========================-->
     <measure number="1">
       <attributes>
@@ -239,7 +239,7 @@
     </measure>
   </part>
   <!--=========================== Part 3 ===========================-->
-  <part id="Pa7745b9c0fd84929dc91a72766c28006">
+  <part id="P43087220402ef3420d13c76c4eeb5c09">
     <!--========================= Measure 1 ==========================-->
     <measure number="1">
       <attributes>
@@ -321,7 +321,7 @@
     </measure>
   </part>
   <!--=========================== Part 4 ===========================-->
-  <part id="Pfdf71098cd0ca964bc4021b2b9e9fffd">
+  <part id="P3e6ba09a0c2042f336d8bf41486e76dc">
     <!--========================= Measure 1 ==========================-->
     <measure number="1">
       <attributes>
@@ -377,7 +377,7 @@
     </measure>
   </part>
   <!--=========================== Part 5 ===========================-->
-  <part id="P65831dbb877842377ba2d4f5c6a24cde">
+  <part id="Pc7002faedd7ce98049241b1c4ce41aa3">
     <!--========================= Measure 1 ==========================-->
     <measure number="1">
       <attributes>
@@ -449,7 +449,7 @@
     </measure>
   </part>
   <!--=========================== Part 6 ===========================-->
-  <part id="P5b68d7e645724a1d1b7cf0267ca0f4a1">
+  <part id="P7661c2b7ac1f3c3e82f45e9c6451b57a">
     <!--========================= Measure 1 ==========================-->
     <measure number="1">
       <attributes>
@@ -547,7 +547,7 @@
     </measure>
   </part>
   <!--=========================== Part 7 ===========================-->
-  <part id="P55e20c8d7592169d1d286c2e0c384903">
+  <part id="Pe951ead949e2bea92d3b96eb5f4db70b">
     <!--========================= Measure 1 ==========================-->
     <measure number="1">
       <attributes>
@@ -635,7 +635,7 @@
     </measure>
   </part>
   <!--=========================== Part 8 ===========================-->
-  <part id="P4f490a927026693fbf72f7ef47e2e120">
+  <part id="P7f60cce8e74515cb46fb305a53c2a409">
     <!--========================= Measure 1 ==========================-->
     <measure number="1">
       <attributes>
@@ -787,7 +787,7 @@
     </measure>
   </part>
   <!--=========================== Part 9 ===========================-->
-  <part id="P9452e8a45860df86e01d6b4868927b8c">
+  <part id="P689daea058c1be85c36264d060cf8ad9">
     <!--========================= Measure 1 ==========================-->
     <measure number="1">
       <attributes>
@@ -913,7 +913,7 @@
     </measure>
   </part>
   <!--========================== Part 10 ===========================-->
-  <part id="P2b90c36bccbe4340d6fd7d90bae2257c">
+  <part id="P257bfd724f69a51d9ce98dd5a55174ae">
     <!--========================= Measure 1 ==========================-->
     <measure number="1">
       <attributes>
@@ -1067,7 +1067,7 @@
     </measure>
   </part>
   <!--========================== Part 11 ===========================-->
-  <part id="P7439c38ceec350f7e43c75ca14b6c10a">
+  <part id="P4c415d19c1b75a948804ef65b3070e00">
     <!--========================= Measure 1 ==========================-->
     <measure number="1">
       <attributes>
@@ -1219,7 +1219,7 @@
     </measure>
   </part>
   <!--========================== Part 12 ===========================-->
-  <part id="P1fdda1e4658e4313fb79267f4c7936fe">
+  <part id="P5a672cc0441fec6641357d51532d6620">
     <!--========================= Measure 1 ==========================-->
     <measure number="1">
       <attributes>

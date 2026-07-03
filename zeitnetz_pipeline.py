@@ -55,15 +55,16 @@ def parse_pitch_input(s):
     for t in tokens:
         try:
             v = int(t)
-            if not 0 <= v <= 11:
-                raise ValueError(f"PC {v} out of range")
-            result.append(v)
         except ValueError:
             tl = t.lower()
             if tl in GERMAN_TO_PC:
                 result.append(GERMAN_TO_PC[tl])
             else:
                 raise ValueError(f"Unknown pitch name: '{t}'")
+        else:
+            if not 0 <= v <= 11:
+                raise ValueError(f"PC {v} out of range (must be 0–11)")
+            result.append(v)
     if set(result) != set(range(12)):
         raise ValueError("Pitch row must contain each class 0–11 exactly once")
     return result
@@ -104,10 +105,23 @@ def compute_onsets(duration_list):
     Cumulative onset positions in the flattened matrix (the 'Find-Index' patch).
     duration_list[0] may be negative (rest); its absolute value is the first onset.
     Returns 12 integers: the addresses used to look up positions in concat.
+    Raises ValueError if a later duration is < 1 or an onset falls outside
+    the 144-element matrix.
     """
+    for j in range(1, 12):
+        if duration_list[j] < 1:
+            raise ValueError(
+                f"Duration {j + 1} must be >= 1, got {duration_list[j]} "
+                "(only the first value may be negative)"
+            )
     onsets = [abs(duration_list[0])]
     for j in range(1, 12):
         onsets.append(onsets[-1] + duration_list[j])
+    if onsets[-1] > 143:
+        raise ValueError(
+            f"Duration list too large: last onset is {onsets[-1]}, "
+            "but addresses must stay within 0–143 (the 144-element matrix)"
+        )
     return onsets
 
 
@@ -235,8 +249,11 @@ def run_stage2(s1):
 
         # Last row may be 1 short (143 remaining values / 12 = 11 r 11).
         # Compute the missing 12th duration with one extra scan.
+        # flat[i] scans for pitch_targets[i]; the missing value is
+        # flat[1 + k*12 + len(durs)], which wraps to target index 0
+        # (the first note of the cyclic continuation).
         if len(durs) < 12:
-            target_pc = pitch_targets[(k * 12 + len(durs)) % tape_len]
+            target_pc = pitch_targets[(1 + k * 12 + len(durs)) % tape_len]
             count = 0
             scan = cursor
             while True:
@@ -2194,12 +2211,10 @@ Examples:
     )
     parser.add_argument("--pitches",   type=str, default=DEFAULT_PITCHES,
                         help="12 pitch classes (integers 0–11 or German names)")
-    parser.add_argument("--perm",      type=str, default=DEFAULT_PERM,
+    parser.add_argument("--perm", "--permutation", type=str, default=DEFAULT_PERM,
                         help="Permutation pattern (12 integers, 0-indexed)")
     parser.add_argument("--durations", type=str, default=DEFAULT_DURATIONS,
                         help="Duration list (13 integers; first may be negative)")
-    parser.add_argument("--axis",      type=int, default=None,
-                        help="Symmetry axis pitch class 0–11 (default: pitch_row[0])")
     parser.add_argument("--export",    action="store_true",
                         help="Write one MusicXML file per stage (stages 1–5)")
     args = parser.parse_args()
@@ -2212,13 +2227,10 @@ Examples:
         print(f"Input error: {e}", file=sys.stderr)
         sys.exit(1)
 
-    axis_pc = args.axis if args.axis is not None else pitch_row[0]
-
     print("\nRunning Zeitnetz Pipeline...")
     print(f"  Pitch row    : {' '.join(pc_name(p) for p in pitch_row)}")
     print(f"  Perm pattern : {perm_pattern}")
     print(f"  Durations    : {duration_list}")
-    print(f"  Symmetry axis: {pc_name(axis_pc)}")
 
     # ── STAGE 1 ──────────────────────────────────────────────────────────────
     try:
